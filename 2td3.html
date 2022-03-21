@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      function a()
+      {
+        ch1=t.value;
+       
+          ch=ch1;
+          i=0;
+          m=0;
+          e=0;
+          c="";
+        do
+        {
+          i+=1;
+
+          x=ch.indexOf('.');
+          
+         
+            k=ch.substring(0,x);
+          
+            if (isNaN(k)||(x==-1)||(ch.length>15))
+            {
+              m=0;
+
+            }
+             if((0<Number(k))&&(Number(k)<=255))
+                {
+
+                    m=1;
+                    c=c+"/"+k;
+
+
+                 }
+            else 
+                        {
+                          m=0};
+                        
+            
+            k1=k+'.';
+            ch=ch.replace(k1,'');
+
+            if(i==3)
+            {
+            ch+='.';
+            }
+        
+        
+      } while(i<4 && m==1 );
+      document.write(c);
+        if (ch.length>0)
+        {
+          m=0;
+        }
+      if (m==1)
+      {
+          alert("jawna behy");
+      }
+      else if (m==0)
+      (alert("mochkla "));
+      }
+    </script>
+</head>
+<body>
+  <input type="text" name="t" id="t">
+    <input type="button"  value="click here" onclick=a()>
+
+</body>
+</html>
